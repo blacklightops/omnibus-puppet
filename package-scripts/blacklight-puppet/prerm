@@ -5,7 +5,7 @@
 #
 
 
-prefix="contegix-"
+prefix="blacklight-"
 puppet_services="puppet-agent" #puppet-master puppet-server puppet-queue"
 
 

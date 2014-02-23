@@ -4,16 +4,16 @@
 # chkconfig: - 65 45
 #
 # description: Processes entities in a queue as they are recieved.
-# processname: contegix-puppet-queue
-# config: /opt/contegix/puppet/etc/sysconfig/puppetqueue
+# processname: blacklight-puppet-queue
+# config: /opt/blacklight/puppet/etc/sysconfig/puppetqueue
 
-PATH=/opt/contegix/puppet/bin:/usr/bin:/sbin:/bin:/usr/sbin
+PATH=/opt/blacklight/puppet/bin:/usr/bin:/sbin:/bin:/usr/sbin
 export PATH
 
-[ -f /opt/contegix/puppet/etc/sysconfig/puppetqueue ] && . /opt/contegix/puppet/etc/sysconfig/puppetqueue
-lockfile=${LOCKFILE-/opt/contegix/puppet/var/lock/subsys/puppetqd}
-pidfile=${PIDFILE-/opt/contegix/puppet/var/run/puppet/queue.pid}
-puppetqd=${PUPPETQD-/opt/contegix/puppet/usr/bin/puppet}
+[ -f /opt/blacklight/puppet/etc/sysconfig/puppetqueue ] && . /opt/blacklight/puppet/etc/sysconfig/puppetqueue
+lockfile=${LOCKFILE-/opt/blacklight/puppet/var/lock/subsys/puppetqd}
+pidfile=${PIDFILE-/opt/blacklight/puppet/var/run/puppet/queue.pid}
+puppetqd=${PUPPETQD-/opt/blacklight/puppet/usr/bin/puppet}
 RETVAL=0
 
 # Source function library.

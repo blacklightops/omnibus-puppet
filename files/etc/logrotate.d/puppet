@@ -1,4 +1,4 @@
-/opt/contegix/puppet/var/log/puppet/*log {
+/opt/blacklight/puppet/var/log/puppet/*log {
   missingok
   notifempty
   create 0644 puppet puppet

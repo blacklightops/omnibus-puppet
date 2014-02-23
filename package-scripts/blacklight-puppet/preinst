@@ -12,8 +12,8 @@ function error_exit
   exit 1
 }
 
-prefix="contegix-"
+prefix="blacklight-"
 puppet_services="puppet-agent " #puppet-master puppet-queue"
-install_base="/opt/contegix/puppet"
+install_base="/opt/blacklight/puppet"
 
 exit 0

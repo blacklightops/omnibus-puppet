@@ -9,7 +9,7 @@ end
 
 host_project_path = File.expand_path("..", __FILE__)
 guest_project_path = "/home/vagrant/#{File.basename(host_project_path)}"
-project_name = "contegix-puppet"
+project_name = "blacklight-puppet"
 
 Vagrant.configure("2") do |config|
 
@@ -97,7 +97,7 @@ Vagrant.configure("2") do |config|
       "omnibus" => {
         "build_user" => "vagrant",
         "build_dir" => guest_project_path,
-        "install_dir" => "/opt/contegix/puppet"
+        "install_dir" => "/opt/blacklight/puppet"
       }
     }
 
