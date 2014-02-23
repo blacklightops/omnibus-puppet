@@ -5,7 +5,7 @@
 #
 
 
-prefix="contegix-"
+prefix="blacklight-"
 puppet_services="puppet-agent" #puppet-master puppet-server puppet-queue"
 
 
@@ -24,9 +24,9 @@ if [ "${1}" -eq "0" ] ; then
 			[ -e /etc/init.d/${service} ] && rm -f /etc/init.d/${service}
 		fi
 	done
-        # unlink logroate config
-        [ -h /etc/logrotate.d/${prefix}puppet ] && rm -f /etc/logrotate.d/${prefix}puppet
-        # unlink cron config
-        [ -h /etc/cron.hourly/${prefix}puppet-agent ] && rm -f /etc/cron.hourly/${prefix}puppet-agent
+	# unlink logroate config
+	[ -h /etc/logrotate.d/${prefix}puppet ] && rm -f /etc/logrotate.d/${prefix}puppet
+	# unlink cron config
+	[ -h /etc/cron.hourly/${prefix}puppet-agent ] && rm -f /etc/cron.hourly/${prefix}puppet-agent
 fi
 exit 0

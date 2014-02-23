@@ -4,7 +4,7 @@
    end
  end
  
-+ARGV << "--confdir=/opt/contegix/puppet/etc/puppet"
++ARGV << "--confdir=/opt/blacklight/puppet/etc/puppet"
 +
  gem 'puppet', version
  load Gem.bin_path('puppet', 'puppet', version)

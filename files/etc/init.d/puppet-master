@@ -4,19 +4,19 @@
 # chkconfig: - 65 45
 #
 # description: Server for the puppet system management tool.
-# processname: contegix-puppetmaster
+# processname: blacklight-puppetmaster
 
-PATH=/opt/contegix/puppet/bin:/usr/bin:/sbin:/bin:/usr/sbin
+PATH=/opt/blacklight/puppet/bin:/usr/bin:/sbin:/bin:/usr/sbin
 export PATH
 
-lockfile=/opt/contegix/puppet/var/lock/subsys/puppetmaster
-pidfile=/opt/contegix/puppet/var/run/puppet/master.pid
+lockfile=/opt/blacklight/puppet/var/lock/subsys/puppetmaster
+pidfile=/opt/blacklight/puppet/var/run/puppet/master.pid
 
 # Source function library.
 . /etc/rc.d/init.d/functions
 
-if [ -f /opt/contegix/puppet/etc/sysconfig/puppetmaster ]; then
-    . /opt/contegix/puppet/etc/sysconfig/puppetmaster
+if [ -f /opt/blacklight/puppet/etc/sysconfig/puppetmaster ]; then
+    . /opt/blacklight/puppet/etc/sysconfig/puppetmaster
 fi
 
 PUPPETMASTER_OPTS="master "
@@ -47,7 +47,7 @@ fi
 
 RETVAL=0
 
-PUPPETMASTER=/opt/contegix/puppet/bin/puppet
+PUPPETMASTER=/opt/blacklight/puppet/bin/puppet
 
 start() {
     echo -n $"Starting puppetmaster: "

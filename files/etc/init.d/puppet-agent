@@ -4,16 +4,16 @@
 # chkconfig: - 98 02
 #
 # description: Enables periodic system configuration checks through puppet.
-# processname: contegix-puppet
-# config: /opt/contegix/puppet/etc/sysconfig/puppet
+# processname: blacklight-puppet
+# config: /opt/blacklight/puppet/etc/sysconfig/puppet
 
-PATH=/opt/contegix/puppet/bin:/usr/bin:/sbin:/bin:/usr/sbin
+PATH=/opt/blacklight/puppet/bin:/usr/bin:/sbin:/bin:/usr/sbin
 export PATH
 
-[ -f /opt/contegix/puppet/etc/sysconfig/puppet ] && . /opt/contegix/puppet/etc/sysconfig/puppet
-lockfile=${LOCKFILE-/opt/contegix/puppet/var/lock/subsys/puppet}
-pidfile=${PIDFILE-/opt/contegix/puppet/var/run/puppet/agent.pid}
-puppetd=${PUPPETD-/opt/contegix/puppet/bin/puppet}
+[ -f /opt/blacklight/puppet/etc/sysconfig/puppet ] && . /opt/blacklight/puppet/etc/sysconfig/puppet
+lockfile=${LOCKFILE-/opt/blacklight/puppet/var/lock/subsys/puppet}
+pidfile=${PIDFILE-/opt/blacklight/puppet/var/run/puppet/agent.pid}
+puppetd=${PUPPETD-/opt/blacklight/puppet/bin/puppet}
 RETVAL=0
 
 # Source function library.

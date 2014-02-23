@@ -1,7 +1,7 @@
 #!/bin/bash
 
-install_base="/opt/contegix/puppet"
-prefix="contegix-"
+install_base="/opt/blacklight/puppet"
+prefix="blacklight-"
 service="${prefix}puppet-agent"
 
 # exit if the daemon is running

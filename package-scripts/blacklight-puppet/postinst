@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Perform necessary puppet setup steps
+# after package is installed.
+#
+
+PROGNAME=$(basename $0)
+
+function error_exit
+{
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  exit 1
+}
+
+prefix="blacklight-"
+puppet_services="puppet-agent " #puppet-master puppet-queue"
+install_base="/opt/blacklight/puppet"
+
+for service in $puppet_services; do
+	if [ ! -e /etc/init.d/${prefix}$service ] ; then
+		ln -s /opt/blacklight/puppet/etc/init.d/$service /etc/init.d/${prefix}${service}
+		chkconfig --add ${prefix}$service
+		chkconfig ${prefix}$service off
+	fi
+done
+
+# link logrotate configuration
+[ -h /etc/logrotate.d/${prefix}puppet ] || ln -s /opt/blacklight/puppet/etc/logrotate.d/puppet /etc/logrotate.d/${prefix}puppet
+# link hourly puppet agent cron
+[ -h /etc/cron.hourly/${prefix}puppet-agent ] || ln -s /opt/blacklight/puppet/etc/cron.hourly/puppet-agent /etc/cron.hourly/${prefix}puppet-agent
+
+exit 0

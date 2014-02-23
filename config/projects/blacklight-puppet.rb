@@ -1,10 +1,9 @@
+name "blacklight-puppet"
+maintainer "Blacklight Ops, Inc."
+homepage "http://www.blacklightops.com"
 
-name "contegix-puppet"
-maintainer "Contegix LLC"
-homepage "http://www.contegix.com"
-
-replaces        "contegix-puppet"
-install_path    "/opt/contegix/puppet"
+replaces        "blacklight-puppet"
+install_path    "/opt/blacklight/puppet"
 #build_version   Omnibus::BuildVersion.new.semver
 build_version   "3.4.3"
 build_iteration 1
