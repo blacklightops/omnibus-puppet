@@ -91,7 +91,7 @@ Vagrant.configure("2") do |config|
       "omnibus" => {
         "build_user" => "vagrant",
         "build_dir" => guest_project_path,
-	"install_dir" => "/opt/blacklight/puppet"
+        "install_dir" => "/opt/blacklight/puppet"
       }
     }
 
